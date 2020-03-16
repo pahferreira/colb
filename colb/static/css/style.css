@@ -649,6 +649,14 @@ li:hover + img {
   align-self: center;
 }
 
+.scrolldown-icon-container {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  position: absolute;
+  bottom: 15px;
+}
+
 .full-screen {
   position: fixed;
   width: 100%;
