@@ -5,8 +5,133 @@
     <h2 id="table-header-to-appear-3">Stage 3, Oversight</h2>
   </div>
 </div>
+<section id="scroll-inside-table">
+  <div class="tbl-header">
+    <table cellpadding="0" cellspacing="0" border="0">
+      <thead>
+        <tr>
+          <th>Regulatory</th>
+          <th>Financial</th>
+          <th>M&C</th>
+          <th>Technology</th>
+        </tr>
+      </thead>
+    </table>
+  </div>
+  <div class="tbl-content">
+    <table cellpadding="0" cellspacing="0" border="0">
+      <tbody>
+        <tr>
+          <td>
+            <ul>
+              <li><p>Business structure</p></li>
+              <li><p>Legal certainity</p></li>
+              <li><p>Bodies interaction</p></li>
+              <li><p>Tax planning</p></li>
+            </ul>
+          </td>
+          <td>
+            <ul>
+              <li><p>Costs analysis</p></li>
+              <li><p>Key performance indicators</p></li>
+              <li><p>Financial projections</p></li>
+              <li><p>Valutation</p></li>
+            </ul>
+          </td>
+          <td>
+            <ul>
+              <li><p>Company goals</p></li>
+              <li><p>Market descriptions</p></li>
+              <li><p>Customer segments</p></li>
+              <li><p>Competitive advantage</p></li>
+              <li><p>Marketing plan</p></li>
+              <li><p>Business image & credibility, halo effect</p></li>
+              <li><p>Communication regulation standards</p></li>
+            </ul>
+          </td>
+          <td>
+            <ul>
+              <li><p>Definition</p></li>
+              <li><p>Protocol DLT</p></li>
+              <li><p>Blockchain</p></li>
+              <li><p>Forks</p></li>
+              <li><p>Token or Coin definition</p></li>
+            </ul>
+          </td>
+        </tr>
+  
+        <tr>
+          <td>
+            <ul>
+              <li><p>Advice</p></li>
+              <li><p>Due diligence</p></li>
+            </ul>
+          </td>
+          <td>
+            <ul>
+              <li><p>Strategy</p></li>
+              <li><p>Equity, token or coin pricing</p></li>
+              <li><p>Underwriting</p></li>
+              <li><p>Investor's KYC &amp; sustainability policy</p></li>
+              <li><p>Roadshow</p></li>
+            </ul>
+          </td>
+          <td>
+            <ul>
+              <li><p>Vehicle analysis &amp; coordination</p></li>
+              <li><p>Investor segments communication</p></li>
+              <li><p>Communication materials &amp; whitepapers</p></li>
+              <li><p>Communication regulation proof</p></li>
+              <li><p>Roadshow coordination</p></li>
+            </ul>
+          </td>
+          <td>
+            <ul>
+              <li><p>Protocol DLT</p></li>
+              <li><p>Blockchain</p></li>
+              <li><p>Forks</p></li>
+              <li><p>Token or Coin design &amp; Creation</p></li>
+              <li><p>Asset tokenisation</p></li>
+              <li><p>Tokenomics &amp; Yellow paper</p></li>
+              <li><p>Smart Contracts</p></li>
+            </ul>
+          </td>
+        </tr>
+  
+        <tr>
+          <td>
+            <ul>
+              <li><p>Diagnostic</p></li>
+              <li><p>Rules, controls, polities &amp; resolutions</p></li>
+              <li><p>AML/FT &amp; Tax compliance policy</p></li>
+              <li><p>Governance policies</p></li>
+            </ul>
+          </td>
+          <td>
+            <ul>
+              <li><p>Business KYC &amp; sustainability policy strategy</p></li>
+            </ul>
+          </td>
+          <td>
+            <ul>
+              <li>
+                <p>Responsability: peer-to-peer communication improvements</p>
+              </li>
+            </ul>
+          </td>
+          <td>
+            <ul>
+              <li><p>Trasparency: shared distributed leadgers</p></li>
+              <li><p>Accountability: irriversability of records</p></li>
+            </ul>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</section>
 
-<div class="table-container-fixed fp-scrollable">
+<!-- <div class="table-container-fixed fp-scrollable">
   <table class="table fixed-headers">
     <thead>
       <tr>
@@ -22,7 +147,7 @@
 
   <table class="table moving-body fp-scrollable">
     <tbody>
-      <tr>
+      <tr style="display: flex;">
         <td class="table-value regulatory-values">
           <ul>
             <li><p>Business structure</p></li>
@@ -129,66 +254,13 @@
       </tr>
     </tbody>
   </table>
-</div>
+</div> -->
 <script>
   opacityFromTopDistance('#table-header-to-appear-1', 0, 0, 100, 0, 0.95);
   opacityFromTopDistance('#table-header-to-appear-2', 0, 100, 200, 0, 0.95);
   opacityFromTopDistance('#table-header-to-appear-3', 0, 200, 300, 0, 0.95);
 
-  const tableValueElements = document.querySelectorAll('.table-value');
-  const theadElements = document.querySelectorAll('.clickable-table');
-
-  const handleActiveItem = elementId => {
-    theadElements.forEach(element => {
-      if (element.getAttribute('id') !== elementId) {
-        element.removeAttribute('class', 'selected-tab');
-      }
-    });
-    tableValueElements.forEach(element => {
-      if (
-        element
-          .getAttribute('class')
-          .split(' ')
-          .includes(`${elementId}-values`)
-      ) {
-        element.setAttribute('style', 'opacity: 1;');
-      } else {
-        element.setAttribute('style', 'opacity: 0;');
-        element.setAttribute('style', 'display: none;');
-      }
-    });
-  };
-
-  const onSelect = element => {
-    let mediaWindow = window.matchMedia('(max-width: 650px)');
-    if (mediaWindow.matches) {
-      element.setAttribute('class', 'selected-tab');
-      handleActiveItem(element.getAttribute('id'));
-    }
-  };
-
-  theadElements.forEach(element => {
-    element.addEventListener('click', () => onSelect(element));
-  });
-
-  const regulatoryElements = document.querySelectorAll('.regulatory-values');
-  regulatoryElements.forEach(element => {
-    element.setAttribute('style', 'opacity: 1;');
-  });
-
-  function handleClickHeaders(mediaWindow) {
-    if (!mediaWindow.matches) {
-      tableValueElements.forEach(element => {
-        element.setAttribute('style', 'opacity: 1;');
-      });
-    }
-  }
-
-  let mediaWindow = window.matchMedia('(max-width: 650px)');
-  mediaWindow.addListener(handleClickHeaders);
-
   var isMoved = false;
-
   $('.table-container-fixed').scroll(function() {
     var currentScrollTop = $(this).scrollTop();
     var totalHeight = 0;
@@ -265,30 +337,39 @@
 
   $(document).ready(function() {
     $('#content-block-9').bind('mousewheel', function(e) {
+      $.fn.fullpage.setAllowScrolling(true);
       if (e.originalEvent.wheelDelta / 120 > 0) {
         $.fn.fullpage.moveTo(8, 0);
-        $.fn.fullpage.setAllowScrolling(false);
         isMoved = false;
       } else {
-        console.log('scrolling down !');
       }
     });
-
     $('#content-block-8').bind('mousewheel', function(e) {
       if (e.originalEvent.wheelDelta / 120 > 0) {
-        console.log('scrolling down Func 2!');
         isMoved = false;
       } else {
         // $.fn.fullpage.moveTo(9, 0);
-        console.log('scrolling down !');
+      }
+    });
+    $('#scroll-inside-table').bind('mousewheel', function(e) {
+      $.fn.fullpage.setAllowScrolling(false);
+      if (e.originalEvent.wheelDelta / 120 > 0) {
+        isMoved = false;
+      } else {
+      }
+    });
+    $('.tbl-content').scroll(function() {
+      if($(this).scrollTop() + $(this).innerHeight() >= $(this)[0].scrollHeight) {
+        $.fn.fullpage.moveTo(9, 0);
       }
     });
     $('.header-container-flex').bind('mousewheel', function(e) {
       if (e.originalEvent.wheelDelta / 120 > 0) {
+        $.fn.fullpage.setAllowScrolling(true);
         $.fn.fullpage.moveTo(7, 0);
       } else {
+        $.fn.fullpage.setAllowScrolling(true);
         $.fn.fullpage.moveTo(9, 0);
-        console.log('scrolling down !');
       }
     });
   });

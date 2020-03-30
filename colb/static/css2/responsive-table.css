@@ -1,3 +1,7 @@
+tr {
+  height: 50%;
+}
+
 .header-container-fixed {
   position: absolute;
   width: 100%;
@@ -31,13 +35,16 @@
 }
 
 .fixed-headers {
+  max-width: 1600px;
   position: fixed;
   background-color: white;
-  transform: translateY(-40px);
+  left: 50%;
+  transform: translate(-50%, -40px);
 }
 
 .moving-body {
-  /* padding-top: 55px; */
+  max-width: 1600px;
+  padding-top: 55px;
 }
 
 .table thead th {
@@ -60,12 +67,6 @@
   max-width: unset !important;
   font-size: 0.75em;
   padding: 0px;
-  padding-left: 20px;
-}
-
-.table thead tr th::before {
-  padding-left: 5px;
-  content: '';
 }
 
 .table tbody {
@@ -77,6 +78,7 @@
 }
 
 .table tbody td {
+  flex: 1 1 25% !important;
   max-width: unset !important;
   padding-top: unset !important;
 }
@@ -157,7 +159,80 @@
 
 @media (min-width: 700px) {
   .table tbody td {
-    min-width: unset !important;
-    min-width: 100px;
+    min-width: 304px;
   }
+}
+
+table{
+  width:100%;
+  max-width: 1600px;
+  table-layout: fixed;
+}
+.tbl-header {
+  border-bottom: 1px solid black;
+ }
+.tbl-content{
+  height:300px;
+  overflow-x:auto;
+  margin-top: 0px;
+  border: 1px solid rgba(255,255,255,0.3);
+}
+th{
+  text-align: left;
+  font-size: 0.75em;
+}
+td{
+  text-align: left;
+  border-bottom: solid 1px rgba(255,255,255,0.1);
+}
+
+table tbody tr td ul {
+  margin: 0;
+}
+
+table tbody tr td ul li {
+  display: flex;
+  align-items: center;
+  font-size: 0.75em;
+  line-height: 18px;
+  word-break: break-word;
+}
+
+table tbody tr td ul li p {
+  width: 100%;  
+}
+
+table tbody tr td ul li p::before {
+  content: '— '
+}
+
+section{
+  height: 55%;
+  position: absolute;
+  bottom: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 0 5%;
+}
+
+@media (min-width: 1900px) {
+  section{
+    margin: 0;
+    width: 100%;
+  }
+}
+
+.preloader{
+  background-color: black;
+  display: flex;
+  justify-content: center;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 1000;
+  transition: opacity 0.8s;
+  opacity: 1;
 }

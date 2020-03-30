@@ -57,6 +57,7 @@ body {
   color: rgb(20, 20, 20);
 	display: flex;
 	flex-wrap: wrap;
+	max-width: 1600px;
 }
 
 .bodycopy2 {
@@ -78,11 +79,8 @@ th {
 }
 
 td, th {
-	padding: 10px;
-  	width: 8em;
-  	min-width: 8em;
- 	max-width: 8em;
-  	word-break: break-all;
+	flex: 1 1 25% !important;
+  word-break: break-all;
 } 
 td {
 	padding-bottom: 20%;

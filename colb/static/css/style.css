@@ -38,7 +38,7 @@ a {
 
 .monnos {
   width: auto;
-  height: 0.85em;
+  height: 0.80em;
 }
 
 .contablack {
@@ -58,7 +58,7 @@ a {
 }
 
 .controled-text-size {
-  max-width: 600px;
+  max-width: 650px;
 }
 
 li {
@@ -105,7 +105,8 @@ li {
 }
 
 .bio .bio-text {
-  margin: 1em 0 !important;
+  margin: 0.5em 0 !important;
+  line-height: 130%;
 }
 
 .bio h3 {
@@ -188,16 +189,7 @@ th {
 
 td,
 th {
-  padding: 10px;
-  width: 8em;
-  min-width: 8em;
-  max-width: 8em;
-}
-
-td {
-  padding-bottom: 30%;
-  padding-right: 5px;
-  vertical-align: top;
+  flex: 1 1 25% !important;
 }
 
 td ul {
@@ -207,10 +199,6 @@ td ul {
 td li {
   margin-right: 40px;
   list-style-type: none;
-}
-
-td li::before {
-  content: '— ';
 }
 
 /*Menu --------------------------------------- */
@@ -444,7 +432,7 @@ span {
 video {
   margin: 0;
   padding: 0;
-  min-width: 100%;
+  width: 100%;
   min-height: 100%;
   position: fixed;
   right: 0;
@@ -645,9 +633,11 @@ li:hover + img {
   flex-direction: row;
   justify-content: center;
   align-content: flex-start;
-  top: 54%;
+  top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
+  margin-left: -1em;
+  margin-top: 1.5em;
 }
 
 .logo2 {
@@ -711,10 +701,6 @@ li:hover + img {
 
 .tab-container ul {
   margin-top: 0;
-}
-
-.tab-container ul li::before {
-  content: '— ';
 }
 
 .centered-content {

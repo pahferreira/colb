@@ -78,9 +78,20 @@
     <script type="text/javascript" src="/static/js/opacity-control.js"></script>
 
     <link rel="stylesheet" type="text/css" href="/static/css/fade-effect.css" />
+    <style>
+
+    </style>
   </head>
 
   <body>
+    <div class="preloader">
+      <img
+        class="logo2"
+        src="/static/img/Colb_Logo_White.png"
+        width="140"
+        alt="logo"
+      />
+    </div>
     <div class="mark-menu">
       <div
         style="background-color: #ffdf00; display: flex; justify-content: center;"
@@ -125,7 +136,7 @@
       <span></span>
       <span></span>
     </div>
-    <div id="main-container" class="container">
+    <div id="main-container" class="container" style="opacity: 0;">
       {% include 'partials/page1.html' %}
       {% include 'partials/page2.html' %}
       {% include 'partials/page3.html' %}
@@ -139,13 +150,19 @@
     $(document).ready(function() {
       $('#main-container').fullpage({
         css3: true,
-        scrollOverflow: true
-        // onLeave: function(index, nextIndex, direction){
-        // 	console.log('onLeave', arguments);
-        // },
-        // afterLoad: function(anchorLink, index){
-        // 	console.log('afterLoad', arguments);
-        // },
+        scrollOverflow: true,
+        scrollOverflowReset: true,
+        onLeave: function(index, nextIndex, direction){
+          const indexToResetScroll = [4, 6, 11, 13]
+          if(indexToResetScroll.includes(index)) {
+            $('.fp-scrollable').scrollTop(0);
+            $('.slimScrollBar').css({ top: '0px'})
+          }
+        },
+        afterLoad: function(anchorLink, index) {
+          document.querySelector(".preloader").style.opacity = 0;
+          document.querySelector("#main-container").style.opacity = 1;
+        },
         // afterRender: function(){
         // 	console.log('afterRender', arguments);
         // },
@@ -184,6 +201,7 @@
     });
 
     function navigate(page) {
+      $.fn.fullpage.setAllowScrolling(true);
       $.fn.fullpage.moveTo(page, 0);
     }
   </script>
