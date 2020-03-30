@@ -192,7 +192,7 @@ table tbody tr td ul {
 
 table tbody tr td ul li {
   display: flex;
-  align-items: center;
+  align-items: flex-start;
   font-size: 0.75em;
   line-height: 18px;
   word-break: break-word;
@@ -202,7 +202,7 @@ table tbody tr td ul li p {
   width: 100%;  
 }
 
-table tbody tr td ul li p::before {
+table tbody tr td ul li::before {
   content: '— '
 }
 
@@ -235,4 +235,13 @@ section{
   z-index: 1000;
   transition: opacity 0.8s;
   opacity: 1;
+}
+
+.tbl-content::-webkit-scrollbar {
+  display: none;
+}
+
+/* Hide scrollbar for IE and Edge */
+.tbl-content {
+  -ms-overflow-style: none;
 }
