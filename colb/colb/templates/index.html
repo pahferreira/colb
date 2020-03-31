@@ -158,6 +158,9 @@
             $('.fp-scrollable').scrollTop(0);
             $('.slimScrollBar').css({ top: '0px'})
           }
+          if ([7, 9].includes(index)) {
+            $('.tbl-content').scrollTop(0);
+          }
         },
         afterLoad: function(anchorLink, index) {
           document.querySelector(".preloader").style.display = "none";
