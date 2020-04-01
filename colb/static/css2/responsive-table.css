@@ -5,7 +5,7 @@ tr {
 .header-container-fixed {
   position: absolute;
   width: 100%;
-  height: 45%;
+  height: 40%;
   top: 0%;
   background-color: white;
 }
@@ -81,6 +81,19 @@ tr {
   flex: 1 1 25% !important;
   max-width: unset !important;
   padding-top: unset !important;
+}
+
+/* Sections */
+.first-section {
+  padding-bottom: 37%;
+}
+
+.second-section {
+  padding-bottom: 35%;
+}
+
+.third-section {
+  padding-bottom: 40%;
 }
 
 .table tbody td li {
