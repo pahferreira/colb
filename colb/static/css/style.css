@@ -38,7 +38,7 @@ a {
 
 .monnos {
   width: auto;
-  height: 0.80em;
+  height: 0.8em;
 }
 
 .contablack {
@@ -258,10 +258,6 @@ iframe {
 .menues li a {
   text-decoration: none;
   color: black;
-}
-
-.menues li a:hover {
-  text-decoration: underline;
 }
 
 .menu ul li:hover {
@@ -659,7 +655,7 @@ li:hover + img {
 }
 
 .text-start-middle {
-  margin-top: 25% !important;
+  margin-top: 22.7% !important;
 }
 
 /* Tab */
@@ -667,6 +663,10 @@ li:hover + img {
 #tab-component {
   height: 100%;
   padding-top: 50px;
+}
+
+h1.margin-left {
+  margin-top: 0;
 }
 
 .tab-title {
@@ -763,10 +763,6 @@ li:hover + img {
 }
 
 @media (max-width: 680px) {
-  .text-start-middle {
-    margin-top: 240px !important;
-  }
-
   .bio {
     max-width: 100%;
     border-bottom: 1px solid black;
@@ -775,15 +771,5 @@ li:hover + img {
   .font-size-control {
     font-size: 20px;
     line-height: 24px;
-  }
-}
-
-/* .text-start-middle h1 {
-  left: -100px;
-} */
-
-@media (max-width: 996px) {
-  .text-start-middle h1 {
-    left: 0px;
   }
 }
