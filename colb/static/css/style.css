@@ -420,9 +420,8 @@ span {
   right: 25px;
   top: 20px;
 }
-
 .black {
-  background: rgb(20, 20, 20);
+  background: black;
 }
 
 video {

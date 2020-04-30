@@ -236,7 +236,7 @@ section {
 }
 
 .preloader {
-  background-color: #141414;
+  background-color: black;
   display: flex;
   justify-content: center;
   position: absolute;

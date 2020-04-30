@@ -3,7 +3,7 @@ button,
 input,
 select,
 textarea {
- 	color: rgb(20, 20, 20);
+ 	color: rgb(0, 0, 0);
  	}
 
 .block-content {
@@ -27,7 +27,7 @@ body {
   	}
 
 .bodycopy {
-	color: rgb(20, 20, 20);
+	color: black;
 	padding: 0 5%;
 	margin: auto;
 }
@@ -266,7 +266,7 @@ span {
 }
 
 .black {
-	background: rgb(20, 20, 20);
+	background: black;
 }
 
 .code {
