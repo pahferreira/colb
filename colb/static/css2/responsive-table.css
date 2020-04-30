@@ -176,26 +176,26 @@ tr {
   }
 }
 
-table{
-  width:100%;
+table {
+  width: 100%;
   max-width: 1600px;
   table-layout: fixed;
 }
 .tbl-header {
   border-bottom: 1px solid black;
- }
-.tbl-content{
-  overflow-x:auto;
-  margin-top: 0px;
-  border: 1px solid rgba(255,255,255,0.3);
 }
-th{
+.tbl-content {
+  overflow-x: auto;
+  margin-top: 0px;
+  border: 1px solid rgba(255, 255, 255, 0.3);
+}
+th {
   text-align: left;
   font-size: 0.75em;
 }
-td{
+td {
   text-align: left;
-  border-bottom: solid 1px rgba(255,255,255,0.1);
+  border-bottom: solid 1px rgba(255, 255, 255, 0.1);
 }
 
 table tbody tr td ul {
@@ -211,14 +211,14 @@ table tbody tr td ul li {
 }
 
 table tbody tr td ul li p {
-  width: 100%;  
+  width: 100%;
 }
 
 table tbody tr td ul li::before {
-  content: '— '
+  content: '— ';
 }
 
-section{
+section {
   height: 55%;
   position: absolute;
   bottom: 0;
@@ -229,14 +229,14 @@ section{
 }
 
 @media (min-width: 1900px) {
-  section{
+  section {
     margin: 0;
     width: 100%;
   }
 }
 
-.preloader{
-  background-color: black;
+.preloader {
+  background-color: #141414;
   display: flex;
   justify-content: center;
   position: absolute;
